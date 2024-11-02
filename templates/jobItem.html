@@ -1,0 +1,26 @@
+<!-- Code for diplaying the jobs list -->
+
+<div class="border-bottom border border-3  border border-top-0 border border-end-0 border border-start-0 row" style="padding-bottom:8px;margin-bottom:16px;" >
+
+    <div class="col-10">
+
+    {% if 'title' in job %}
+    <h4 style="color:rgb(120,120,120);margin-bottom:4px;">{{job['title']}}</h4>
+    {% endif %}
+
+    {% if 'location' in job %}
+    <div><b>Location:</b> {{job['location']}}</div>
+    {% endif %}
+
+    {% if 'salary' in job %}
+    <div><b>Salary:</b> {{job['salary']}}</div>
+    {% endif %}
+
+    </div>
+
+    <div class="col-2">
+    <a href="mailto:kumuda134@gmail.com?subject=Application%20for%{{job['title']}}&body=Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AResume%20link%3A%20%3C%20your%20resume%20link%3E%0D%0A%0D%0ALinkedIn%20link%3A%20%3Cyour%20linkedin%20link%3E" type="button" class="btn btn-outline-primary">Apply</a>
+    <!-- <button class="badge text-bg-secondary">Available</button> -->
+    </div>
+
+</div>

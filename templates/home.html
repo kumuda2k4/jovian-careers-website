@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jovian Careers</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        #banner{
+            height:360px;
+            width:100%;
+            object-fit: cover;
+            margin-bottom: 16px;
+        }
+    </style>
+</head>
+<body>
+
+    {% include 'nav.html' %}
+
+   
+    
+    <img class="img-fluid" id="banner"src="static\background.jpg" alt="Career picture">
+
+    <div class="container">
+
+    <h1 class="text-center mt-2 mb-4">{{company_name}} Careers</h1>
+
+    <div class="row" style="margin-bottom: 16px;">
+        <div class="col-md-6">
+    <p class="lead">
+        Lorem ipsum odor amet, consectetuer adipiscing elit. Blandit libero pulvinar massa nascetur proin suscipit. Velit dapibus eget duis facilisi hac adipiscing. Fermentum venenatis aliquet mauris eu sapien vestibulum. Orci purus est sociosqu nisi lacus. Aliquet feugiat justo dui odio arcu nulla ultrices. Velit nulla dictumst conubia etiam commodo lobortis magna id finibus. Magna ad curabitur nullam ex porta.
+    </p>
+    </div>
+    <div class="d-none d-md-block col-md-6">
+    <img src="static\people.jpg" style="height:320px;border-radius: 4px;" alt="People Working">
+    </div>
+    </div>
+    <h2 class="text-center">Open Positions</h2>
+
+    <div style="margin-bottom:16px;">
+        {% for job in jobs %}
+        
+
+        {% include 'jobItem.html' %}
+        
+        {% endfor %}
+    </div>
+
+    <div class="text-center">
+    <a href="mailto:kumuda134@gmail.com?subject=Question%20about%20job%20Openings&body=Name%3A%20%3Cyour%20name%20here%3E%0D%0A%0D%0AQuestion%20link%3A%20%3C%20your%20question%20here%3E" class="btn btn-primary btn-lg">Contact us</a>
+    
+    </div>
+    
+</div>
+{% include 'footer.html' %}
+</body>
+</html>
