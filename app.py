@@ -34,7 +34,6 @@ def hello_jovian():
     return render_template('home.html',jobs=JOBS,company_name='Jovian' )
 
 @app.route('/api/jobs')
-
 def list_jobs():
     return jsonify(JOBS)
 
