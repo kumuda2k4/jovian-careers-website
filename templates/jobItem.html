@@ -1,0 +1,25 @@
+<!-- Code for diplaying the jobs list -->
+
+<div class="border-bottom border border-3  border border-top-0 border border-end-0 border border-start-0 row" style="padding-bottom:8px;margin-bottom:16px;" >
+
+    <div class="col-10">
+
+    {% if 'title' in job %}
+    <h4 style="color:rgb(120,120,120);margin-bottom:4px;">{{job['title']}}</h4>
+    {% endif %}
+
+    {% if 'location' in job %}
+    <div><b>Location:</b> {{job['location']}}</div>
+    {% endif %}
+
+    {% if 'salary' in job %}
+    <div><b>Salary:</b> {{job['salary']}}</div>
+    {% endif %}
+
+    </div>
+
+    <div class="col-2">
+    <button type="button" class="btn btn-outline-primary">Apply</button>
+    </div>
+
+</div>
